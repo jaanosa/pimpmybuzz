@@ -5,52 +5,267 @@
     font-family: 'Poppins', sans-serif;
 }
 
-/* body {
-    font-family: Poppins;
-    font-size: .875rem;
+body {
+    /* font-size: .875rem; */
     line-height: 1.8;
     color: #333;
     letter-spacing: .05rem;
-} */
+}
+
+h1, h2, h3, ul, li, p {
+    margin: 0;
+}
+
+ul {
+    padding: 0;
+}
+
+.img-res {
+    max-width: 100%;
+    height: 100%;
+}
+
+.cmn-font {
+    font-family: 'Raleway', sans-serif;
+}
+
+.cmn-fsize {
+    font-size: 3em;
+    font-weight: 900;
+}
+
+.cmn-color {
+    color: #ffb75c;
+}
+
+.cmn-color2 {
+    color: #3f3e76;
+}
+
+.cmn-bg-color {
+    background-color: #ffb75c;
+}
+
+.cmn-border-color {
+    border-color: #ffb75c;
+}
+
+.cmn-bg-color2 {
+    background-color: #3f3e76;
+}
+
+.cmn-border-color2 {
+    border-color: #3f3e76;
+}
+
+.cmn-container {
+    max-width: 1140px;
+    padding: 1em;
+    margin: 0 auto;
+}
+
+.cmn-img {
+    position: relative;
+}
+
+.cmn-img::before {
+    content: "";
+    display: block;
+    padding-top: 100%;
+}
+
+.cmn-img img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    object-fit: contain;
+}
 
 .main-nav {
-box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 5%)
+    position: fixed;
+    width: 100%;
+    background: #fff;
+    z-index: 1030;
+    box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 5%)
 }
 
-.hero-banner {
-    height: 100vh;
+.nav-link li {
+    padding: 0 1em;
+    list-style: none;
 }
 
-.hero-item {
-    width: calc(100%/2);
+.nav-link a {
+    color: #010001;
+    text-decoration: unset;
+}
+
+.nav-link .active {
+    color: #3f3e76;
+    font-weight: 600;
+}
+
+.footer-item {
+    padding: 1em;
+    width: calc(100%/3);
+}
+
+.footer-item h3{
+    padding-bottom: 1em;
+}
+
+.footer-item ul{
+    padding: 0;
+}
+
+.footer-item li{
+    list-style: none;
+    padding-bottom: 10px;
+}
+
+.footer-item a{
+    text-decoration: none;
+    color: #676062;
+}
+
+.footer-item .btn a{
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+}
+
+.hero-banner .cmn-container {
+    min-height: 75vh;
+}
+
+.hero-item:nth-of-type(1) {
+    width: 60%;
+}
+
+.hero-item:nth-of-type(2) {
+    width: 40%;
 }
 
 .hero-text h2 {
-    font-family: 'Raleway', sans-serif;
     font-weight: 900;
-    line-height: 0.75;
+    line-height: 0.85;
 }
 
 .hero-text h2:nth-of-type(1) {
     font-size: 19vh;
-    color: orange;
+    color: #ffb75c;
 }
 
 .hero-text h2:nth-of-type(2) {
     font-size: 8vh;
-    color: #3c3ca5
+    color: #3f3e76
 }
 
 .hero-text h2:nth-of-type(3) {
     font-size: 16vh;
-    color: #3c3ca5
+    color: #3f3e76
 }
 
 .hero-btn button a {
     text-decoration: unset;
     color: #fff;
+    font-weight: 500;
 }
 
 .hero-btn button:nth-of-type(2) a {
-    color: orange;
+    color: #ffb75c;
+}
+
+.why-pimp {
+    background: #fbf9f6;
+}
+
+.why-item {
+    background: #fff;
+    margin-bottom: 2.5em;
+    width: calc(100%/2 - 20px);
+    box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 5%);
+}
+
+.why-item-title span {
+    width: 15%;
+}
+
+.why-item-title .why-item-text {
+    width: 85%;
+}
+
+.why-item-title i {
+    color: #fff;
+    padding: 0.5em;
+    font-size: 25px;
+    border-radius: 4px;
+}
+
+.why-item-title .fa-thumbs-up {
+    background: #fba932;
+}
+
+.why-item-title .fa-lightbulb {
+    background: #fa5696;
+}
+
+.why-item-title .fa-globe-asia {
+    background: #0fccce;
+}
+
+.why-item-title .fa-envelope-open {
+    background: #7b53fe;
+}
+
+.why-item-text p {
+    color: #676062;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 2em;
+    font-weight: 500;
+    font-size: 13px;
+}
+
+.why-item-wrapper a {
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 2em;
+    letter-spacing: 1px;
+}
+
+.about-item {
+    width: calc(100%/2 - 20px);
+}
+
+.about-item blockquote{
+    border-left: 7px solid #ffb75c;
+}
+
+.about-item blockquote p{
+    padding-left: 1em;
+    color: #010001;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.about-item a {
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 2em;
+    letter-spacing: 1px;
+}
+
+.about-rewrite {
+    background: #fbf9f6;
+}
+
+.about-rewrite p{
+    font-weight: 600;
+}
+
+.about-rewrite .btn a {
+    text-decoration: none;
+    color: #fff;
 }
