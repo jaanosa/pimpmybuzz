@@ -269,3 +269,96 @@ ul {
     text-decoration: none;
     color: #fff;
 }
+
+.service-item {
+    width: calc(100%/2 - 20px);
+}
+
+.service-item blockquote{
+    border-left: 7px solid #ffb75c;
+}
+
+.service-item blockquote p{
+    padding-left: 1em;
+    color: #010001;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.service-btn button a {
+    text-decoration: unset;
+    color: #fff;
+    font-weight: 500;
+}
+
+.service-btn button:nth-of-type(2) a {
+    color: #ffb75c;
+}
+
+.service-para .service-item a {
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 2em;
+    letter-spacing: 1px;
+}
+
+.contact-item:nth-of-type(1) {
+    width: calc(60%-10px);
+}
+
+.contact-item:nth-of-type(2) {
+    width: 45%;
+}
+
+.contact-us-form .input-wrapper input {
+    width: calc(100%/2 - 10px);
+}
+
+.contact-us-form .btn {
+    color: #fff;
+    font-weight: 500;
+}
+
+.contact-detail-item {
+    width: calc(100%/3 - 10px);
+}
+
+.contact-detail-item span{
+    width: 20%;
+}
+
+.contact-detail-item .contact-content{
+    width: 80%;
+}
+
+.contact-detail-item i {
+    color: #fff;
+    padding: 0.5em;
+    font-size: 25px;
+    border-radius: 4px;
+}
+
+.contact-detail-item .fa-map-marker-alt {
+    background: #fba932;
+}
+
+.contact-detail-item .fa-phone-alt {
+    background: #fa5696;
+}
+
+.contact-detail-item .fa-envelope {
+    background: #0fccce;
+}
+
+.contact-publicity {
+    background: #fbf9f6;
+}
+
+.contact-publicity p{
+    font-weight: 600;
+}
+
+.contact-publicity .btn a {
+    text-decoration: none;
+    color: #fff;
+}
