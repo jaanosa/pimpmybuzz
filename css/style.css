@@ -530,7 +530,7 @@ screen and (max-width: 1024px) {
 @media print,
 screen and (max-width: 768px) {
     .toggle-nav {
-        top: 96px;
+        top: 81px;
     }
 
     .nav-hamburger {
@@ -683,7 +683,7 @@ screen and (max-width: 425px) {
     }
 
     .toggle-nav {
-        top: 88px;
+        top: 70px;
     }
 
     .free-assestment {
