@@ -7,6 +7,9 @@ $(document).ready(function () {
 
     //initialize mobile hamburger menu
     setNav();
+
+    //initialize email function
+    initEmail();
 });
 
 $(window).on('scroll resize', function () {
@@ -21,6 +24,43 @@ $(window).on('scroll resize', function () {
         $(body).toggleClass('toggle-body');
     }
 });
+
+function initEmail() {
+    let submit = $('#contact-us-btn');
+    if(submit.length > 0){
+        submit.on('click',function(){
+            sendEmail();
+        });
+    }
+}
+
+function sendEmail() {
+    // Email.send({
+    //   Host: "smtp.gmail.com",
+    //   Username: "pimpmybuzz2022@gmail.com",
+    //   Password: "PimpMyBuzz_2022",
+    //   To: 'jaanosa11@gmail.com',
+    //   From: "pimpmybuzz2022@gmail.com",
+    //   Subject: "Sending Email using javascript",
+    //   Body: "Well that was easy!!",
+    // })
+    //   .then(function (message) {
+    //     alert(message);
+    //     // alert("mail sent successfully")
+    //   });
+    Email.send({
+        // SecureToken : "f865c869-11c9-46ad-9663-ed95629af79f",
+        Host: "smtp.gmail.com",
+        Username: "pimpmybuzz2022@gmail.com",
+        Password: "PimpMyBuzz_2022",
+        To : 'jaanosa11@gmail.com',
+        From : "jessie.allen.anosa@acret-ph.com",
+        Subject : "This is the subject",
+        Body : "And this is the body"
+    }).then(
+      message => alert(message)
+    );
+}
 
 function initSwiper() {
     var swiper = new Swiper(".mySwiper", {
