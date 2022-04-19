@@ -221,6 +221,27 @@ ul {
     background: #ffb75c;
 }
 
+.free-assestment {
+    position: fixed;
+    bottom: 0px;
+    right: 25px;
+}
+
+.ass-head {
+    padding: 1em;
+    background: #ff1346;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.ass-wrapper a {
+    text-decoration: unset;
+}
+
+.ass-wrapper h3 {
+    font-size: 16px;
+    color: #fff;
+}
 
 .toggle-nav {
     top: 85px;
@@ -493,6 +514,10 @@ screen and (max-width: 1024px) {
 
 @media print,
 screen and (max-width: 768px) {
+    .toggle-nav {
+        top: 96px;
+    }
+
     .nav-hamburger {
         display: block;
     }
@@ -608,7 +633,7 @@ screen and (max-width: 768px) {
     }
 
     .contact-banner {
-        padding-top: 5em;
+        padding-top: 8em;
         padding-bottom: 5em;
     }
 
@@ -640,6 +665,24 @@ screen and (max-width: 768px) {
 screen and (max-width: 425px) {
     .nav-logo {
         width: 31%;
+    }
+
+    .toggle-nav {
+        top: 88px;
+    }
+
+    .free-assestment {
+        right: 0;
+        left: 0;
+    }
+
+    .ass-head {
+        text-align: center;
+        padding: 1.5em;
+    }
+
+    .ass-wrapper {
+        animation: unset;
     }
 
     .hero-text h2:nth-of-type(1) {
