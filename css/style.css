@@ -119,6 +119,30 @@ ul {
     box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 5%)
 }
 
+.nav-logo {
+    width: 20%;
+    position: relative;
+}
+
+.nav-logo::before {
+    content: "";
+    display: block;
+    padding-top: 33.25%;
+}
+
+.nav-hamburger {
+    display: none;
+}
+
+.nav-logo img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    object-fit: cover;
+}
+
 .nav-link li {
     padding: 0 1em;
     list-style: none;
@@ -132,6 +156,74 @@ ul {
 .nav-link .active {
     color: #3f3e76;
     font-weight: 600;
+}
+
+.nav-hamburger .fas {
+    padding: 0.5em;
+    border: 1px solid #ffb75c;
+    border-radius: 50%;
+    font-size: 18px;
+    color: #ffb75c;
+    width: 40px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-hamburger .fas:nth-of-type(2) {
+    display: none;
+}
+
+.toggle-menu .fas:nth-of-type(1) {
+    display: none;
+}
+
+.toggle-menu .fas:nth-of-type(2) {
+    display: flex;
+}
+
+.mobile-nav {
+    position: fixed;
+    width: 100%;
+    background: #fff;
+    top: -100vh;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+    z-index: 2;
+}
+
+.mobile-nav .d-flex {
+    flex-direction: column;
+}
+
+.mobile-nav .py-4 {
+    padding: 0 !important;
+}
+
+.mobile-nav .nav-link {
+    width: 100%;
+    padding: 0;
+}
+
+.mobile-nav li {
+    padding: 0;
+    width: 100%;
+}
+
+.mobile-nav a {
+    padding: 1em;
+    width: 100%;
+    display: block;
+}
+
+.mobile-nav .active {
+    color: #fff;
+    background: #ffb75c;
+}
+
+
+.toggle-nav {
+    top: 85px;
 }
 
 .footer-item {
@@ -172,6 +264,7 @@ ul {
 }
 
 .hero-item:nth-of-type(2) {
+    padding-left: 1.5em;
     width: 40%;
 }
 
@@ -392,7 +485,22 @@ ul {
 }
 
 @media print,
+screen and (max-width: 1024px) {
+    .hero-btn button {
+        padding: 1em 2em !important;
+    }
+}
+
+@media print,
 screen and (max-width: 768px) {
+    .nav-hamburger {
+        display: block;
+    }
+
+    .main-nav .nav-link{
+        display: none;
+    }
+
     .hero-banner .cmn-container {
         padding: 3em 0;
     }
@@ -411,6 +519,10 @@ screen and (max-width: 768px) {
 
     .hero-text-wrapper {
         text-align: center;
+    }
+
+    .hero-item:nth-of-type(2){
+        padding: 0;
     }
 
     .why-pimp .cmn-container{
@@ -496,11 +608,16 @@ screen and (max-width: 768px) {
     }
 
     .contact-banner {
+        padding-top: 5em;
         padding-bottom: 5em;
     }
 
     .contact-banner .vh-100 {
         height: unset !important;
+    }
+
+    .contact-item h2 {
+        font-size: 2em;
     }
 
     .contact-item:nth-of-type(1) {
@@ -521,6 +638,24 @@ screen and (max-width: 768px) {
 
 @media print,
 screen and (max-width: 425px) {
+    .nav-logo {
+        width: 31%;
+    }
+
+    .hero-text h2:nth-of-type(1) {
+        font-size: 17vh;
+    }
+
+    .hero-text h2:nth-of-type(2) {
+        font-size: 6vh;
+        color: #3f3e76;
+    }
+
+    .hero-text h2:nth-of-type(3) {
+        font-size: 14vh;
+        color: #3f3e76;
+    }
+
     .hero-banner {
         padding-top: 5em;
     }
