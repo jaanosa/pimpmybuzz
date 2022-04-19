@@ -16,8 +16,9 @@
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="icon" type="image/x-icon" href="https://www.kyocera.co.jp/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="./images/logowithoutwords.png">
     <link rel="apple-touch-icon" href="_assets/img/common/apple-touch-icon.png">
     <meta name="format-detection" content="telephone=no">
     <meta property="og:locale" content="ja_JP">
@@ -39,7 +40,9 @@
         <nav class="main-nav">
             <div class="cmn-container d-flex justify-content-between align-items-center py-4">
                 <div class="nav-logo">
-                    <img src="" alt="logo">
+                    <img class="img-res"
+                        src="https://prfountain.com/wp-content/uploads/2021/01/pr-fountain-favicon-svg-2.svg"
+                        alt="logo">
                 </div>
                 <div class="nav-link">
                     <ul class="d-flex align-items-center">
@@ -62,12 +65,29 @@
     </header>
     <div class="hero-banner">
         <div class="cmn-container d-flex align-items-center vh-100">
-            <div class="hero-item">
-                <div class="cmn-img">
-                    <img class="img-res" src="./images/hero-banner.png" alt="hero-banner">
+            <div class="hero-item" data-aos="fade-down" data-aos-easing="ease-in-out">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="cmn-img">
+                                <img class="img-res" src="./images/hero-banner.png" alt="hero-banner">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="cmn-img">
+                                <img class="img-res" src="./images/service-banner.png" alt="hero-banner">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="cmn-img">
+                                <img class="img-res" src="./images/contact-us.png" alt="hero-banner">
+                            </div>
+                        </div>
+                    </div>
                 </div>
+
             </div>
-            <div class="hero-item hero-text-wrapper">
+            <div class="hero-item hero-text-wrapper" data-aos="fade-down" data-aos-easing="ease-in-out">
                 <div class="hero-text">
                     <div class="call-out">
                         <h2 class="text-uppercase cmn-font">Free</h2>
@@ -109,7 +129,7 @@
                         <a class="cmn-color2" href="http://">Learn More</a>
                     </div>
                 </div>
-                <div class="why-item p-5 rounded-3" data-aos="fade-down">
+                <div class="why-item p-5 rounded-3" data-aos="fade-down" data-aos-easing="ease-in-out">
                     <div class=" why-item-wrapper d-flex flex-column">
                         <div class="why-item-title">
                             <div class="d-flex">
@@ -130,7 +150,7 @@
                         <a class="cmn-color2" href="http://">Learn More</a>
                     </div>
                 </div>
-                <div class="why-item p-5 rounded-3" data-aos="fade-down">
+                <div class="why-item p-5 rounded-3" data-aos="fade-down" data-aos-easing="ease-in-out">
                     <div class=" why-item-wrapper d-flex flex-column">
                         <div class="why-item-title">
                             <div class="d-flex">
@@ -148,7 +168,7 @@
                         <a class="cmn-color2" href="http://">Learn More</a>
                     </div>
                 </div>
-                <div class="why-item p-5 rounded-3" data-aos="fade-down">
+                <div class="why-item p-5 rounded-3" data-aos="fade-down" data-aos-easing="ease-in-out">
                     <div class=" why-item-wrapper d-flex flex-column">
                         <div class="why-item-title">
                             <div class="d-flex">
