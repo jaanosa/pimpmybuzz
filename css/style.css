@@ -446,6 +446,7 @@ ul {
 
 .contact-banner {
     padding-top: 8em;
+    padding-bottom: 8em;
 }
 
 .contact-item:nth-of-type(1) {
@@ -510,7 +511,11 @@ ul {
 }
 
 .contact-us-form .btn:focus {
-    color: #ffb75c;
+    /* color: #ffb75c;
+    border: 1px solid #ffb75c;
+    box-shadow: unset; */
+    color: #fff;
+    background: #ffb75c;
     border: 1px solid #ffb75c;
     box-shadow: unset;
 }
