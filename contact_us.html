@@ -90,20 +90,20 @@
         </nav>
     </header>
     <div class="contact-banner cmn-container">
-        <div class="d-flex align-items-center justify-content-between vh-100">
+        <div class="d-flex align-items-center justify-content-between">
             <div class="contact-item">
                 <p data-aos="fade-down" data-aos-easing="ease-in-out">Got a question?</p>
                 <h2 class="cmn-color2 cmn-fsize cmn-font mb-4" data-aos="fade-down" data-aos-easing="ease-in-out">
                     Contact Pimp my Buzz</h2>
                 <div class="contact-us-form" data-aos="fade-down" data-aos-easing="ease-in-out">
-                    <div class="input-wrapper d-flex justify-content-between pb-3">
-                        <input class="form-control" type="text" placeholder="Name">
-                        <input class="form-control" type="email" placeholder="Email">
-                    </div>
-                    <textarea class="form-control" name="" id="" cols="30" rows="6" placeholder="Message"></textarea>
-                    <button class="form-control btn cmn-bg-color rounded-3 p-3 px-5 mt-3" id="contact-us-btn">
-                        Submit
-                    </button>
+                    <form action="">
+                        <div class="input-wrapper d-flex justify-content-between pb-3">
+                            <input class="form-control" type="text" placeholder="Name">
+                            <input class="form-control" type="email" placeholder="Email" required>
+                        </div>
+                        <textarea class="form-control" name="" id="" cols="30" rows="6" placeholder="Message"></textarea>
+                        <input class="form-control btn cmn-bg-color rounded-3 p-3 px-5 mt-3" id="contact-us-btn" type="submit" value="Submit">
+                    </form>
                 </div>
             </div>
             <div class="contact-item">
@@ -149,11 +149,9 @@
     <div class="contact-publicity p-5" data-aos="fade-down" data-aos-easing="ease-in-out">
         <div class="cmn-container text-center">
             <p class="mb-4">Spark publicity for your book with Pimp my Buzz.</p>
-            <button class="btn cmn-bg-color2 rounded-3 p-3 px-5">
-                <a href="./services.html">
-                    See our Services
-                </a>
-            </button>
+            <a href="./services.html">
+                <span class="cmn-bg-color2 rounded-3 p-3 px-5">See our Services</span>
+            </a>
         </div>
     </div>
     <footer>
@@ -191,17 +189,15 @@
                     <h3>Get Started</h3>
                     <ul>
                         <li>
-                            <a href="http://">
+                            <a href="./contact_us.html">
                                 Let’s rewrite the future
                                 together.
                             </a>
                         </li>
                     </ul>
-                    <button class="btn cmn-bg-color rounded-3 p-3 px-5">
-                        <a href="http://">
-                            Get Started
-                        </a>
-                    </button>
+                    <a class="d-block mt-3" href="./contact_us.html">
+                        <span class="cmn-bg-color rounded-3 p-3 px-5">Get Started</span>
+                    </a>
                 </div>
             </div>
         </div>

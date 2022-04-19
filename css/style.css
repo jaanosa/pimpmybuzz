@@ -75,7 +75,7 @@ ul {
 }
 
 .cmn-border-color {
-    border-color: #ffb75c;
+    border-color: #ffb75c !important;
 }
 
 .cmn-bg-color2 {
@@ -83,7 +83,7 @@ ul {
 }
 
 .cmn-border-color2 {
-    border-color: #3f3e76;
+    border-color: #3f3e76 !important;
 }
 
 .cmn-container {
@@ -270,7 +270,7 @@ ul {
     color: #676062;
 }
 
-.footer-item .btn a {
+.footer-item a span{
     text-decoration: none;
     color: #fff;
     font-weight: 500;
@@ -309,13 +309,13 @@ ul {
     color: #3f3e76
 }
 
-.hero-btn button a {
+.hero-btn a {
     text-decoration: unset;
     color: #fff;
     font-weight: 500;
 }
 
-.hero-btn button:nth-of-type(2) a {
+.hero-btn a:nth-of-type(2) {
     color: #ffb75c;
 }
 
@@ -407,7 +407,7 @@ ul {
     font-weight: 600;
 }
 
-.about-rewrite .btn a {
+.about-rewrite a {
     text-decoration: none;
     color: #fff;
 }
@@ -427,13 +427,13 @@ ul {
     font-weight: 500;
 }
 
-.service-btn button a {
+.service-btn a {
     text-decoration: unset;
     color: #fff;
     font-weight: 500;
 }
 
-.service-btn button:nth-of-type(2) a {
+.service-btn a:nth-of-type(2) {
     color: #ffb75c;
 }
 
@@ -442,6 +442,10 @@ ul {
     font-weight: 600;
     margin-top: 2em;
     letter-spacing: 1px;
+}
+
+.contact-banner {
+    padding-top: 8em;
 }
 
 .contact-item:nth-of-type(1) {
@@ -500,9 +504,15 @@ ul {
     font-weight: 600;
 }
 
-.contact-publicity .btn a {
+.contact-publicity a {
     text-decoration: none;
     color: #fff;
+}
+
+.contact-us-form .btn:focus {
+    color: #ffb75c;
+    border: 1px solid #ffb75c;
+    box-shadow: unset;
 }
 
 @media print,
@@ -712,8 +722,9 @@ screen and (max-width: 425px) {
         flex-direction: column;
     }
 
-    .hero-btn button {
+    .hero-btn span {
         margin: 0 0 1em 0 !important;
+        display: block;
     }
 
     .about-para:nth-of-type(1) {
@@ -722,6 +733,11 @@ screen and (max-width: 425px) {
 
     .about-item {
         padding: 0;
+    }
+
+    .about-rewrite span {
+        width: 100%;
+        display: block;
     }
 
     .why-pimp .cmn-container {
@@ -753,8 +769,10 @@ screen and (max-width: 425px) {
         flex-direction: column;
     }
 
-    .service-btn button {
+    .service-btn span {
         margin: 0 0 1em 0 !important;
+        width: 100%;
+        display: block;
     }
 
     .service-para {
@@ -803,6 +821,11 @@ screen and (max-width: 425px) {
         padding: 0 !important;
     }
 
+    .contact-publicity span {
+        display: block;
+        width: 100%;
+    }
+
     footer .d-flex {
         flex-direction: column;
         text-align: center;
@@ -810,5 +833,10 @@ screen and (max-width: 425px) {
 
     .footer-item {
         width: 100%;
+    }
+
+    .footer-item a span {
+        width: 100%;
+        display: block;
     }
 }
