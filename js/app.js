@@ -4,6 +4,12 @@ let message = {
 };
 let alert       = null;
 let alert_body  = null;
+let submit      = null;
+let name        = null;
+let email       = null;
+let phone       = null;
+let website     = null;
+let msg         = null;
 
 $(document).ready(function () {
     // initialize animation on scroll
@@ -17,6 +23,9 @@ $(document).ready(function () {
 
     //initialize email function
     initEmail();
+
+    //initialize alert close function
+    closeAlert();
 });
 
 $(window).on('scroll resize', function () {
@@ -32,17 +41,21 @@ $(window).on('scroll resize', function () {
     }
 });
 
-function initEmail() {
-    let submit      = $('#contact-us-btn');
-    let name        = $('#inp_name');
-    let email       = $('#inp_email');
-    let phone       = $('#inp_phone')
-    let website     = $('#inp_website')
-    let msg         = $('#inp_msg');
-    let data        = [];
-    alert           = $('#alert-msgs');    
-    alert_body      = $('.alert-body');
+function initVariables() {
+    submit      = $('#contact-us-btn');
+    name        = $('#inp_name');
+    email       = $('#inp_email');
+    phone       = $('#inp_phone')
+    website     = $('#inp_website')
+    msg         = $('#inp_msg');
+    alert       = $('#alert-msgs');    
+    alert_body  = $('.alert-body');
+}
 
+function initEmail() {
+    let data        = [];
+    initVariables();
+    
     if(submit.length > 0){
         submit.on('click',function(){
             if(email.val() != ''){
@@ -71,13 +84,14 @@ function initEmail() {
 }
 
 function sendEmail(data) {
-    alert       = $('#alert-msgs');
-    alert_body  = $('.alert-body');
     let submit  = $('.submit-wrap');
     let load    = $('.loading-wrap');
+    let btn     = $('#contact-us-btn');
+    initVariables();
 
     submit.toggleClass('d-none');
     load.toggleClass('d-none');
+    btn.attr('disabled','disabled');
 
     Email.send({
         // SecureToken : "f865c869-11c9-46ad-9663-ed95629af79f",
@@ -117,6 +131,7 @@ function sendEmail(data) {
         alert.addClass(message.status != 'success' ? 'alert-danger' : 'alert-success');
         alert.toggleClass('show');
 
+        btn.removeAttr('disabled');
         submit.toggleClass('d-none');
         load.toggleClass('d-none');
       } 
@@ -135,7 +150,6 @@ function initSwiper() {
     });
 }
 
-//for menu toggle
 function setNav() {
     let hamburger = $('.nav-hamburger'),
         mobile_nav = $('.mobile-nav'),
@@ -146,4 +160,15 @@ function setNav() {
         $(hamburger).toggleClass('toggle-menu');
         $(body).toggleClass('toggle-body');
     });
+}
+
+function closeAlert() {
+    let alert       = $('#alert-msgs');
+    let alert_close = $('#alert-close');
+
+    if(alert_close.length > 0){
+        alert_close.on('click',function(){
+            alert.toggleClass('show');
+        });
+    }
 }
