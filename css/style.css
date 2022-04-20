@@ -904,4 +904,8 @@ screen and (max-width: 425px) {
     .service-para .p-5{
         padding: 0 !important;
     }
+
+    .contact-banner {
+        padding-top: 5em;
+    }
 }
