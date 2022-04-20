@@ -36,6 +36,8 @@ function initEmail() {
     let submit      = $('#contact-us-btn');
     let name        = $('#inp_name');
     let email       = $('#inp_email');
+    let phone       = $('#inp_phone')
+    let website     = $('#inp_website')
     let msg         = $('#inp_msg');
     let data        = [];
     alert           = $('#alert-msgs');    
@@ -45,9 +47,11 @@ function initEmail() {
         submit.on('click',function(){
             if(email.val() != ''){
                 data = {
-                    'name'  : name.val(),
-                    'email' : email.val(),
-                    'msg'   : msg.val(),
+                    'name'    : name.val(),
+                    'email'   : email.val(),
+                    'phone'   : phone.val(),
+                    'website' : website.val(),
+                    'msg'     : msg.val(),
                 }
                 sendEmail(data);
             }else{
@@ -80,10 +84,11 @@ function sendEmail(data) {
         Host: "smtp.gmail.com",
         Username: "pimpmybuzz2022@gmail.com",
         Password: "PimpMyBuzz_2022",
-        To : 'jaanosa11@gmail.com',
+        To : 'jaanosa11@gmail.com', // - dev email
+        // To : 'logicalhearty@gmail.com', // - prod email
         From : data.email,
         Subject : `Inquiry from ${data.name}`,
-        Body : data.msg
+        Body : `Phone # : ${data.phone} <br> Website : ${data.website} <br> Message : ${data.msg}`
     }).then(
       messages => {
         let status = null;
