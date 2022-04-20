@@ -552,6 +552,10 @@ screen and (max-width: 1200px) {
         padding-right: 2rem!important;
         padding-left: 2rem!important;
     }
+
+    .contact-banner {
+        padding-top: 4em;
+    }
 }
 
 @media print,
@@ -613,10 +617,6 @@ screen and (max-width: 992px) {
 
     .service-btn {
         text-align: center;
-    }
-
-    .contact-banner {
-        padding-top: 9em;
     }
 
     .contact-banner .d-flex {
