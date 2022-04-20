@@ -124,6 +124,12 @@ function sendEmail(data) {
             'msg'   : msgg
         }
 
+        name.val('');
+        email.val('');
+        phone.val('');
+        website.val('');
+        msg.val('');
+
         alert_body.html('');
         alert_body.html(message.msg);
         alert.removeClass('alert-success');
