@@ -239,7 +239,7 @@ ul {
 }
 
 .ass-wrapper h3 {
-    font-size: 16px;
+    font-size: 14px;
     color: #fff;
 }
 
@@ -691,6 +691,10 @@ screen and (max-width: 768px) {
         display: none;
     }
 
+    .why-pimp .cmn-container {
+        padding: 0 1em;
+    }
+
     .about-para:nth-of-type(1) {
         padding-top: 8em;
     }
@@ -709,7 +713,7 @@ screen and (max-width: 768px) {
 
     .about-item {
         width: 100%;
-        padding: 0 3em 3em 3em;
+        padding: 0 1em 3em 1em;
     }
 
     .about-item h2 {
@@ -721,6 +725,7 @@ screen and (max-width: 768px) {
     }
 
     .service-para .d-flex {
+        padding: 0 !important;
         flex-direction: column;
     }
 
@@ -730,11 +735,18 @@ screen and (max-width: 768px) {
 
     .service-item {
         width: 100%;
-        padding-bottom: 3em;
+        padding: 0 !important;
+        padding-bottom: 3em !important;
     }
 
     .service-item h2 {
         text-align: center;
+        font-size: 2em;
+    }
+
+    .service-btn .px-5 {
+        padding-right: 2rem!important;
+        padding-left: 2rem!important;
     }
 
     footer .d-flex {
@@ -791,7 +803,11 @@ screen and (max-width: 425px) {
     }
 
     .hero-banner {
-        padding-top: 5em;
+        padding-top: 3em;
+    }
+
+    .hero-banner .cmn-container {
+        padding: 0;
     }
 
     .hero-item:nth-of-type(2){
@@ -808,6 +824,14 @@ screen and (max-width: 425px) {
         display: block;
     }
 
+    .why-pimp .cmn-fsize {
+        font-size: 2em;
+    }
+
+    .why-item {
+        padding: 2em 1em!important;
+    }
+
     .about-para:nth-of-type(1) {
         padding-top: 9em;
     }
@@ -816,9 +840,17 @@ screen and (max-width: 425px) {
         padding: 0;
     }
 
+    .about-rewrite {
+        padding: 1em !important;
+    }
+
     .about-rewrite span {
         width: 100%;
         display: block;
+    }
+
+    .service-banner {
+        padding-top: 2em;
     }
 
     .why-pimp .cmn-container {
