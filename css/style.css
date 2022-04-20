@@ -826,10 +826,19 @@ screen and (max-width: 425px) {
 
     .why-pimp .cmn-fsize {
         font-size: 2em;
+        padding: 1em !important;
     }
 
     .why-item {
         padding: 2em 1em!important;
+    }
+
+    .why-item-title .why-item-text {
+        width: 100%;
+    }
+
+    .why-item-wrapper a {
+        text-align: center;
     }
 
     .about-para:nth-of-type(1) {
@@ -850,7 +859,7 @@ screen and (max-width: 425px) {
     }
 
     .service-banner {
-        padding-top: 2em;
+        padding-top: 5em;
     }
 
     .why-pimp .cmn-container {
