@@ -442,6 +442,11 @@ ul {
     font-weight: 600;
     margin-top: 2em;
     letter-spacing: 1px;
+    display: block;
+}
+
+.trunc-content {
+    overflow-y: hidden;
 }
 
 .contact-banner {
