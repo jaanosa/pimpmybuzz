@@ -295,17 +295,20 @@ ul {
 }
 
 .hero-text h2:nth-of-type(1) {
-    font-size: 19vh;
+    /* font-size: 19vh; */
+    font-size: 10em;
     color: #ffb75c;
 }
 
 .hero-text h2:nth-of-type(2) {
-    font-size: 8vh;
+    /* font-size: 8vh; */
+    font-size: 4em;
     color: #3f3e76
 }
 
 .hero-text h2:nth-of-type(3) {
-    font-size: 16vh;
+    /* font-size: 16vh; */
+    font-size: 8em;
     color: #3f3e76
 }
 
@@ -542,15 +545,15 @@ ul {
 @media print,
 screen and (max-width: 1200px) {
     .hero-text h2:nth-of-type(1) {
-        font-size: 18vh;
+        font-size: 9em;
     }
 
     .hero-text h2:nth-of-type(2) {
-        font-size: 7vh;
+        font-size: 3em;
     }
 
     .hero-text h2:nth-of-type(3) {
-        font-size: 15vh;
+        font-size: 7em;
     }
 
     .hero-btn .px-5 {
@@ -794,17 +797,15 @@ screen and (max-width: 425px) {
     }
 
     .hero-text h2:nth-of-type(1) {
-        font-size: 17vh;
+        font-size: 7em;
     }
 
     .hero-text h2:nth-of-type(2) {
-        font-size: 6vh;
-        color: #3f3e76;
+        font-size: 2em;
     }
 
     .hero-text h2:nth-of-type(3) {
-        font-size: 14vh;
-        color: #3f3e76;
+        font-size: 5em;
     }
 
     .hero-banner {
