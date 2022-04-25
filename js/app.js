@@ -101,8 +101,7 @@ function sendEmail(data) {
         Host: "smtp.gmail.com",
         Username: "pimpmybuzz2022@gmail.com",
         Password: "PimpMyBuzz_2022",
-        To: 'jaanosa11@gmail.com', // - dev email
-        // To : 'logicalhearty@gmail.com', // - prod email
+        To: 'admin@pimpmybuzz.com', 
         From: data.email,
         Subject: `Inquiry from ${data.name}`,
         Body: `Phone # : ${data.phone} <br> Website : ${data.website} <br> Message : ${data.msg}`
