@@ -88,33 +88,28 @@ function initEmail() {
 
 function sendEmail(data) {
     let submit = $('.submit-wrap');
-    let load = $('.loading-wrap');
-    let btn = $('#contact-us-btn');
+    let load   = $('.loading-wrap');
+    let btn    = $('#contact-us-btn');
+    let url    = './email.php';
+    
     initVariables();
 
     submit.toggleClass('d-none');
     load.toggleClass('d-none');
     btn.attr('disabled', 'disabled');
 
-    Email.send({
-        // SecureToken : "f865c869-11c9-46ad-9663-ed95629af79f",
-        Host: "smtp.gmail.com",
-        Username: "pimpmybuzz2022@gmail.com",
-        Password: "PimpMyBuzz_2022",
-        To: 'admin@pimpmybuzz.com', 
-        From: data.email,
-        Subject: `Inquiry from ${data.name}`,
-        Body: `Phone # : ${data.phone} <br> Website : ${data.website} <br> Message : ${data.msg}`
-    }).then(
-        messages => {
+    $.ajax({
+        type: "POST",
+        url: url,
+        data: data,
+        success: function (data) {
             let status = null;
             let msgg = null;
             message = {
                 'status': null,
                 'msg': null
             }
-            console.log(messages);
-            if (messages != 'OK') {
+            if (data != 'OK') {
                 status = 'error';
                 msgg = messages;
             } else {
@@ -142,8 +137,12 @@ function sendEmail(data) {
             btn.removeAttr('disabled');
             submit.toggleClass('d-none');
             load.toggleClass('d-none');
-        }
-    );
+            
+         },
+         error: function(jqXHR, textStatus, errorThrown) {
+            console.log(textStatus, errorThrown);
+         }
+      });
 }
 
 function initSwiper() {
