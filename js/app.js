@@ -2,14 +2,15 @@ let message = {
     'status': null,
     'msg': null
 };
-let alert = null;
+
+let alert      = null;
 let alert_body = null;
-let submit = null;
-let name = null;
-let email = null;
-let phone = null;
-let website = null;
-let msg = null;
+let submit     = null;
+let name       = null;
+let email      = null;
+let phone      = null;
+let website    = null;
+let msg        = null;
 
 $(document).ready(function () {
     // initialize animation on scroll
@@ -32,10 +33,10 @@ $(document).ready(function () {
 });
 
 $(window).on('scroll resize', function () {
-    let toggled = $('.toggle-nav');
-    let hamburger = $('.nav-hamburger'),
+    let toggled    = $('.toggle-nav');
+    let hamburger  = $('.nav-hamburger'),
         mobile_nav = $('.mobile-nav'),
-        body = $('body');
+        body       = $('body');
 
     if (toggled.length > 0) {
         $(mobile_nav).toggleClass('toggle-nav');
@@ -45,13 +46,13 @@ $(window).on('scroll resize', function () {
 });
 
 function initVariables() {
-    submit = $('#contact-us-btn');
-    name = $('#inp_name');
-    email = $('#inp_email');
-    phone = $('#inp_phone')
-    website = $('#inp_website')
-    msg = $('#inp_msg');
-    alert = $('#alert-msgs');
+    submit     = $('#contact-us-btn');
+    name       = $('#inp_name');
+    email      = $('#inp_email');
+    phone      = $('#inp_phone')
+    website    = $('#inp_website')
+    msg        = $('#inp_msg');
+    alert      = $('#alert-msgs');
     alert_body = $('.alert-body');
 }
 
@@ -87,11 +88,13 @@ function initEmail() {
 }
 
 function sendEmail(data) {
+    jQuery.support.cors = true;
+    
     let submit = $('.submit-wrap');
     let load   = $('.loading-wrap');
     let btn    = $('#contact-us-btn');
     let url    = './email.php';
-    
+
     initVariables();
 
     submit.toggleClass('d-none');
@@ -111,10 +114,10 @@ function sendEmail(data) {
             }
             if (data != 'OK') {
                 status = 'error';
-                msgg = messages;
+                msgg   = messages;
             } else {
                 status = 'success';
-                msgg = 'Email successfully sent.'
+                msgg   = 'Email successfully sent.'
             }
             message = {
                 'status': status,
