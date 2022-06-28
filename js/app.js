@@ -1,4 +1,4 @@
-let message = {
+let messages = {
     'status': null,
     'msg': null
 };
@@ -101,51 +101,53 @@ function sendEmail(data) {
     load.toggleClass('d-none');
     btn.attr('disabled', 'disabled');
 
-    $.ajax({
-        type: "POST",
-        url: url,
-        data: data,
-        success: function (data) {
-            let status = null;
-            let msgg = null;
-            message = {
-                'status': null,
-                'msg': null
-            }
-            if (data != 'OK') {
-                status = 'error';
-                msgg   = messages;
-            } else {
-                status = 'success';
-                msgg   = 'Email successfully sent.'
-            }
-            message = {
-                'status': status,
-                'msg': msgg
-            }
+    Email.send({
+        // Host : "smtp.elasticemail.com",
+        // Username : "pimpmybuzz2022@gmail.com",
+        // Password : "A474E1B29F09771753E67A11EC1B7B35A97C",
+        SecureToken : "C973D7AD-F097-4B95-91F4-40ABC5567812",
+        To : 'jaanosa11@gmail.com',
+        From : 'pimpmybuzz2022@gmail.com',
+        Subject : `Inquiry from ${data.name}`,
+        Body : `Email: ${data.email} <br>Phone: ${data.phone} <br>Website: ${data.website} <br>Message: ${data.msg}`
+    }).then(
+      message => {
+        let status = null;
+        let msgg = null;
+        messages = {
+            'status': null,
+            'msg': null
+        }
+        if (message != 'OK') {
+            status = 'error';
+            msgg   = messages;
+        } else {
+            status = 'success';
+            msgg   = 'Email successfully sent.'
+        }
+        messages = {
+            'status': status,
+            'msg': msgg
+        }
 
-            name.val('');
-            email.val('');
-            phone.val('');
-            website.val('');
-            msg.val('');
+        name.val('');
+        email.val('');
+        phone.val('');
+        website.val('');
+        msg.val('');
 
-            alert_body.html('');
-            alert_body.html(message.msg);
-            alert.removeClass('alert-success');
-            alert.removeClass('alert-danger');
-            alert.addClass(message.status != 'success' ? 'alert-danger' : 'alert-success');
-            alert.toggleClass('show');
+        alert_body.html('');
+        alert_body.html(messages.msg);
+        alert.removeClass('alert-success');
+        alert.removeClass('alert-danger');
+        alert.addClass(messages.status != 'success' ? 'alert-danger' : 'alert-success');
+        alert.toggleClass('show');
 
-            btn.removeAttr('disabled');
-            submit.toggleClass('d-none');
-            load.toggleClass('d-none');
-            
-         },
-         error: function(jqXHR, textStatus, errorThrown) {
-            console.log(textStatus, errorThrown);
-         }
-      });
+        btn.removeAttr('disabled');
+        submit.toggleClass('d-none');
+        load.toggleClass('d-none');
+      }
+    );
 }
 
 function initSwiper() {
