@@ -102,11 +102,10 @@ function sendEmail(data) {
     btn.attr('disabled', 'disabled');
 
     Email.send({
-        // Host : "smtp.elasticemail.com",
-        // Username : "pimpmybuzz2022@gmail.com",
-        // Password : "A474E1B29F09771753E67A11EC1B7B35A97C",
-        SecureToken : "C973D7AD-F097-4B95-91F4-40ABC5567812",
-        To : 'jaanosa11@gmail.com',
+        Host : "smtp.elasticemail.com",
+        Username : "pimpmybuzz2022@gmail.com",
+        Password : "A474E1B29F09771753E67A11EC1B7B35A97C",
+        To : 'admin@pimpmybuzz.com',
         From : 'pimpmybuzz2022@gmail.com',
         Subject : `Inquiry from ${data.name}`,
         Body : `Email: ${data.email} <br>Phone: ${data.phone} <br>Website: ${data.website} <br>Message: ${data.msg}`
